@@ -1,0 +1,10 @@
+F:\DotNetExamples\SampleCalculator\SampleCalculator\bin\Debug\SampleCalculator.exe.config
+F:\DotNetExamples\SampleCalculator\SampleCalculator\bin\Debug\SampleCalculator.exe
+F:\DotNetExamples\SampleCalculator\SampleCalculator\bin\Debug\SampleCalculator.pdb
+F:\DotNetExamples\SampleCalculator\SampleCalculator\obj\Debug\SampleCalculator.csprojAssemblyReference.cache
+F:\DotNetExamples\SampleCalculator\SampleCalculator\obj\Debug\SampleCalculator.Form1.resources
+F:\DotNetExamples\SampleCalculator\SampleCalculator\obj\Debug\SampleCalculator.Properties.Resources.resources
+F:\DotNetExamples\SampleCalculator\SampleCalculator\obj\Debug\SampleCalculator.csproj.GenerateResource.cache
+F:\DotNetExamples\SampleCalculator\SampleCalculator\obj\Debug\SampleCalculator.csproj.CoreCompileInputs.cache
+F:\DotNetExamples\SampleCalculator\SampleCalculator\obj\Debug\SampleCalculator.exe
+F:\DotNetExamples\SampleCalculator\SampleCalculator\obj\Debug\SampleCalculator.pdb
