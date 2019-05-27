@@ -14,7 +14,7 @@ namespace SampleCalculator
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
       
