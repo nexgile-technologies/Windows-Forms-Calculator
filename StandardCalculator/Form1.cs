@@ -20,6 +20,8 @@ namespace StandardCalculator
        private void ButtonNum_click(object sender, EventArgs e)
         {
 
+        Button btn=(Button)sender;
+        Result_Box.Text+=btn;
         }
     }
 }
