@@ -19,9 +19,22 @@ namespace StandardCalculator
 
        private void ButtonNum_click(object sender, EventArgs e)
         {
-
         Button btn=(Button)sender;
-        Result_Box.Text+=btn.Text;
+            if (Result_Box.Text == "0")
+                Result_Box.Text = btn.Text;
+            else
+                Result_Box.Text+=btn.Text;
+        }
+
+        private void Operator_click(object sender, EventArgs e)
+        {
+            //Button btn = (Button)sender;
+            //var aaa = btn.Text;
+            //var bbb = int.Parse(Result_Box.Text);
+            //if(btn.Text == "+")
+            //{
+            //    double.Parse(Result_Box.Text)+ = bbb;
+            //}
         }
     }
 }

@@ -146,6 +146,7 @@
             this.Plus.TabIndex = 19;
             this.Plus.Text = "+";
             this.Plus.UseVisualStyleBackColor = true;
+            this.Plus.Click += new System.EventHandler(this.Operator_click);
             // 
             // Three
             // 
@@ -188,6 +189,7 @@
             this.Minus.TabIndex = 15;
             this.Minus.Text = "-";
             this.Minus.UseVisualStyleBackColor = true;
+            this.Minus.Click += new System.EventHandler(this.Operator_click);
             // 
             // Six
             // 
@@ -230,6 +232,7 @@
             this.Multiply.TabIndex = 11;
             this.Multiply.Text = "x";
             this.Multiply.UseVisualStyleBackColor = true;
+            this.Multiply.Click += new System.EventHandler(this.Operator_click);
             // 
             // Nine
             // 
@@ -272,6 +275,7 @@
             this.Division.TabIndex = 7;
             this.Division.Text = "÷";
             this.Division.UseVisualStyleBackColor = true;
+            this.Division.Click += new System.EventHandler(this.Operator_click);
             // 
             // Back
             // 
@@ -338,10 +342,10 @@
             // 
             // Result_Box
             // 
-            this.Result_Box.Location = new System.Drawing.Point(214, 84);
+            this.Result_Box.Location = new System.Drawing.Point(217, 84);
             this.Result_Box.Multiline = true;
             this.Result_Box.Name = "Result_Box";
-            this.Result_Box.Size = new System.Drawing.Size(375, 43);
+            this.Result_Box.Size = new System.Drawing.Size(366, 43);
             this.Result_Box.TabIndex = 1;
             this.Result_Box.Text = "0";
             this.Result_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
