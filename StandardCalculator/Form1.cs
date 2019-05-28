@@ -21,7 +21,7 @@ namespace StandardCalculator
         {
 
         Button btn=(Button)sender;
-        Result_Box.Text+=btn;
+        Result_Box.Text+=btn.Text;
         }
     }
 }
