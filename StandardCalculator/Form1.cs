@@ -12,6 +12,10 @@ namespace StandardCalculator
 {
     public partial class Form1 : Form
     {
+        double FirstNumber;
+        string Operator;
+        double SecondNumber;
+        double Result;
         public Form1()
         {
             InitializeComponent();
@@ -28,13 +32,23 @@ namespace StandardCalculator
 
         private void Operator_click(object sender, EventArgs e)
         {
-            //Button btn = (Button)sender;
-            //var aaa = btn.Text;
-            //var bbb = int.Parse(Result_Box.Text);
-            //if(btn.Text == "+")
-            //{
-            //    double.Parse(Result_Box.Text)+ = bbb;
-            //}
+            FirstNumber = double.Parse(Result_Box.Text);
+            Result_Box.Text = "0";
+            Operator = "+";
+
+        }
+
+        private void Equal_click(object sender, EventArgs e)
+        {
+            SecondNumber = double.Parse(Result_Box.Text);
+            if (Operator == "+")
+            {
+                Result = FirstNumber + SecondNumber;
+                Result_Box.Text = Convert.ToString(Result);
+                FirstNumber = Result;
+            }
         }
     }
 }
+
+

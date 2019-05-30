@@ -108,6 +108,7 @@
             this.Equal.TabIndex = 23;
             this.Equal.Text = "=";
             this.Equal.UseVisualStyleBackColor = true;
+            this.Equal.Click += new System.EventHandler(this.Equal_click);
             // 
             // Dot
             // 
@@ -117,6 +118,7 @@
             this.Dot.TabIndex = 22;
             this.Dot.Text = ".";
             this.Dot.UseVisualStyleBackColor = true;
+            this.Dot.Click += new System.EventHandler(this.ButtonNum_click);
             // 
             // Zero
             // 
