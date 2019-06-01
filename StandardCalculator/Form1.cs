@@ -12,10 +12,10 @@ namespace StandardCalculator
 {
     public partial class Form1 : Form
     {
-        double FirstNumber;
-        string Operator;
-        double SecondNumber;
-        double Result;
+       
+        string Operator="";
+        bool Isoperator = false;
+        double Result=0;
         public Form1()
         {
             InitializeComponent();
@@ -23,8 +23,9 @@ namespace StandardCalculator
 
        private void ButtonNum_click(object sender, EventArgs e)
         {
-        Button btn=(Button)sender;
-            if (Result_Box.Text == "0")
+            Isoperator = false;
+            Button btn=(Button)sender;
+            if (Result_Box.Text == "0" )
                 Result_Box.Text = btn.Text;
             else
                 Result_Box.Text+=btn.Text;
@@ -32,21 +33,45 @@ namespace StandardCalculator
 
         private void Operator_click(object sender, EventArgs e)
         {
-            FirstNumber = double.Parse(Result_Box.Text);
-            Result_Box.Text = "0";
-            Operator = "+";
-
+            Isoperator = true;
+            Button btn = (Button)sender;
+            Operator = btn.Text;
+            Result = double.Parse(Result_Box.Text);
         }
 
         private void Equal_click(object sender, EventArgs e)
         {
-            SecondNumber = double.Parse(Result_Box.Text);
-            if (Operator == "+")
+            switch(Operator)
             {
-                Result = FirstNumber + SecondNumber;
-                Result_Box.Text = Convert.ToString(Result);
-                FirstNumber = Result;
+                case "+":
+                    Result_Box.Text = (Result + double.Parse(Result_Box.Text)).ToString();
+
+                break;
+                case "-":
+                    Result_Box.Text = (Result - double.Parse(Result_Box.Text)).ToString();
+
+                    break;
+                case "*":
+                    Result_Box.Text = (Result * double.Parse(Result_Box.Text)).ToString();
+
+                    break;
+                case "/":
+                    Result_Box.Text = (Result / double.Parse(Result_Box.Text)).ToString();
+                    break;
+                default:
+                    break;
             }
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            Result = 0;
+            Result_Box.Text = "0";
+        }
+
+        private void ClearEntry_Click(object sender, EventArgs e)
+        {
+            Result_Box.Text = "0";
         }
     }
 }

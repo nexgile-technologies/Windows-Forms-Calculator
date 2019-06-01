@@ -296,6 +296,7 @@
             this.Clear.TabIndex = 5;
             this.Clear.Text = "C";
             this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // ClearEntry
             // 
@@ -305,6 +306,7 @@
             this.ClearEntry.TabIndex = 4;
             this.ClearEntry.Text = "CE";
             this.ClearEntry.UseVisualStyleBackColor = true;
+            this.ClearEntry.Click += new System.EventHandler(this.ClearEntry_Click);
             // 
             // OneDividedBy
             // 
