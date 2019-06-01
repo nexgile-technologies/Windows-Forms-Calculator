@@ -54,6 +54,7 @@
             this.SquareRoot = new System.Windows.Forms.Button();
             this.Percentage = new System.Windows.Forms.Button();
             this.Result_Box = new System.Windows.Forms.TextBox();
+            this.Resultlabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -287,6 +288,7 @@
             this.Back.TabIndex = 6;
             this.Back.Text = "Back";
             this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_click);
             // 
             // Clear
             // 
@@ -316,6 +318,7 @@
             this.OneDividedBy.TabIndex = 3;
             this.OneDividedBy.Text = "1/x";
             this.OneDividedBy.UseVisualStyleBackColor = true;
+            this.OneDividedBy.Click += new System.EventHandler(this.Operator_click);
             // 
             // button3
             // 
@@ -325,6 +328,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "x²";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Operator_click);
             // 
             // SquareRoot
             // 
@@ -334,6 +338,7 @@
             this.SquareRoot.TabIndex = 1;
             this.SquareRoot.Text = "√";
             this.SquareRoot.UseVisualStyleBackColor = true;
+            this.SquareRoot.Click += new System.EventHandler(this.Operator_click);
             // 
             // Percentage
             // 
@@ -354,11 +359,21 @@
             this.Result_Box.Text = "0";
             this.Result_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // Resultlabel
+            // 
+            this.Resultlabel.AutoSize = true;
+            this.Resultlabel.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.Resultlabel.Location = new System.Drawing.Point(214, 68);
+            this.Resultlabel.Name = "Resultlabel";
+            this.Resultlabel.Size = new System.Drawing.Size(0, 13);
+            this.Resultlabel.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Resultlabel);
             this.Controls.Add(this.Result_Box);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
@@ -397,6 +412,7 @@
         private System.Windows.Forms.Button SquareRoot;
         private System.Windows.Forms.Button Percentage;
         private System.Windows.Forms.TextBox Result_Box;
+        private System.Windows.Forms.Label Resultlabel;
     }
 }
 
