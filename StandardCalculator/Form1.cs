@@ -19,11 +19,12 @@ namespace StandardCalculator
         public Form1()
         {
             InitializeComponent();
+            Result_Box.ReadOnly = false;
         }
 
        private void ButtonNum_click(object sender, EventArgs e)
         {
-           
+            
             Button btn=(Button)sender;
             if ((Result_Box.Text == "0") || Isoperator)
                 Result_Box.Clear();
@@ -53,7 +54,8 @@ namespace StandardCalculator
 
         private void Equal_click(object sender, EventArgs e)
         {
-            switch(Operator)
+            Back.Enabled = false;
+            switch (Operator)
             {
                 case "+":
                     Result_Box.Text = (Result + double.Parse(Result_Box.Text)).ToString();
@@ -82,6 +84,10 @@ namespace StandardCalculator
                 case "1/x":
                     Result_Box.Text = (1 / Result).ToString();
                    break;
+                case "%":
+                    Result_Box.Text = (Result / 100).ToString();
+                        break;
+
                 default:
                     break;
             }
@@ -89,6 +95,7 @@ namespace StandardCalculator
 
         private void Clear_Click(object sender, EventArgs e)
         {
+            Back.Enabled = true;
             Result = 0;
             Result_Box.Text = "0";
             Resultlabel.Text = "0";
@@ -96,17 +103,28 @@ namespace StandardCalculator
 
         private void ClearEntry_Click(object sender, EventArgs e)
         {
+            
+            Back.Enabled = true;
             Result_Box.Text = "0";
         }
 
         private void Back_click(object sender, EventArgs e)
         {
-            int result;
-            result = int.Parse(Result_Box.Text);
-            int res= result % 10;
+            int n=Result_Box.Text.Length;
             if (Result_Box.Text.Length == 1)
                 Result_Box.Text = "0";
-            else Result_Box.Text = Result_Box.Text.Remove(0, 1);
+            else Result_Box.Text = Result_Box.Text.Remove(n-1, 1);
+        }
+
+        private void Negate_Click(object sender, EventArgs e)
+        {
+            Result = double.Parse(Result_Box.Text);
+            //if (Math.Sign(Result) == 1) Result_Box.Text=Result_Box.Text.Replace("+" + Result_Box.Text, "-" + Result_Box.Text);
+            //else if (Math.Sign(Result) == -1) Result_Box.Text = Result_Box.Text.Replace("-" + Result_Box.Text, "+" + Result_Box.Text);
+
+            ////if (Math.Sign(Result) == 0) Resultlabel.Text
+            Result_Box.Text = (Result * -1).ToString();
+            if (Result_Box.Text == "0") Resultlabel.Text = "negate(0)";
         }
     }
 }

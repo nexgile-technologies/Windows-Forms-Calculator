@@ -140,6 +140,7 @@
             this.button21.TabIndex = 20;
             this.button21.Text = "+/-";
             this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.Negate_Click);
             // 
             // Plus
             // 
@@ -348,16 +349,20 @@
             this.Percentage.TabIndex = 0;
             this.Percentage.Text = "%";
             this.Percentage.UseVisualStyleBackColor = true;
+            this.Percentage.Click += new System.EventHandler(this.Operator_click);
             // 
             // Result_Box
             // 
-            this.Result_Box.Location = new System.Drawing.Point(217, 84);
+            this.Result_Box.Font = new System.Drawing.Font("Franklin Gothic Medium", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Result_Box.Location = new System.Drawing.Point(217, 83);
             this.Result_Box.Multiline = true;
             this.Result_Box.Name = "Result_Box";
-            this.Result_Box.Size = new System.Drawing.Size(366, 43);
+            this.Result_Box.ReadOnly = true;
+            this.Result_Box.Size = new System.Drawing.Size(366, 44);
             this.Result_Box.TabIndex = 1;
             this.Result_Box.Text = "0";
             this.Result_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Result_Box.Visible = false;
             // 
             // Resultlabel
             // 
