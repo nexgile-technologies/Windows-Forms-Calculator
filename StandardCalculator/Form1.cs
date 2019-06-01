@@ -101,9 +101,12 @@ namespace StandardCalculator
 
         private void Back_click(object sender, EventArgs e)
         {
+            int result;
+            result = int.Parse(Result_Box.Text);
+            int res= result % 10;
             if (Result_Box.Text.Length == 1)
                 Result_Box.Text = "0";
-            //else Result_Box.Text
+            else Result_Box.Text = Result_Box.Text.Remove(0, 1);
         }
     }
 }
